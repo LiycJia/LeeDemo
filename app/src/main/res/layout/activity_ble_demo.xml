@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lee.leedemo.BleDemoActivity">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="scan"
+            tools:layout_editor_absoluteX="41dp"
+            tools:layout_editor_absoluteY="7dp" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_scan"
+            android:text="stop"
+            tools:layout_editor_absoluteX="245dp"
+            tools:layout_editor_absoluteY="7dp" />
+
+        <Button
+            android:id="@+id/btn_sifilter"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_stop"
+            android:text="filter"
+            tools:layout_editor_absoluteX="245dp"
+            tools:layout_editor_absoluteY="7dp" />
+
+        <TextView
+            android:id="@+id/tv_nums"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_sifilter"
+            android:text="nums"
+            tools:layout_editor_absoluteX="245dp"
+            tools:layout_editor_absoluteY="7dp"
+            android:layout_above="@+id/rcl_devices" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcl_devices"
+            android:layout_width="367dp"
+            android:layout_height="447dp"
+            android:layout_alignEnd="@+id/btn_sifilter"
+            android:layout_below="@+id/btn_scan"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="55dp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
