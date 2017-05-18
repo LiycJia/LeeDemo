@@ -11,11 +11,12 @@ class MainKotlinActivity : AppCompatActivity() {
 
 
         fun sum(a: Int, b: Int): Int {
-            return a + b;
+            return a + b
         }
 
         fun printSum(a: Int, b: Int): Unit {
-            print(a + b);
+            print(a + b)
         }
+        
     }
 }
