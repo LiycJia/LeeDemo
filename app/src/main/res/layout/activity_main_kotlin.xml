@@ -6,15 +6,22 @@
     android:layout_height="match_parent"
     tools:context="lee.leedemo.MainKotlinActivity">
 
-    <TextView
-        android:id="@+id/tv_name"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Helleo Kotlin"/>
-    <Button
-        android:id="@+id/btn_kotlin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="56dp"
-        tools:layout_editor_absoluteX="0dp" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Helleo Kotlin" />
+
+        <Button
+            android:id="@+id/btn_kotlin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="56dp" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

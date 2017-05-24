@@ -45,7 +45,7 @@ public class BlePhoneDemoActivity extends AppCompatActivity {
     void scan() {
         Log.e("ble", "scan");
         mList.clear();
-        bluetoothAdapter.startDiscovery();
+        new Thread(() -> bluetoothAdapter.startDiscovery()).start();
     }
 
     //停止扫描设备
@@ -156,15 +156,11 @@ public class BlePhoneDemoActivity extends AppCompatActivity {
             //配对
             if (device.getBondState() == BluetoothDevice.BOND_NONE) {
                 Method creMethod = BluetoothDevice.class.getMethod("createBond");
-                creMethod.invoke(mReceiver);
+                creMethod.invoke(device);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
             if (bluetoothSocket.isConnected())
                 bluetoothSocket.connect();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -172,6 +168,7 @@ public class BlePhoneDemoActivity extends AppCompatActivity {
     BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
+            Log.e("ble", intent.getAction());
             String action = intent.getAction();
             if (BluetoothDevice.ACTION_FOUND.equals(action)) {
                 //发现设备
