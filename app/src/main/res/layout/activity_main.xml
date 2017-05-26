@@ -27,12 +27,19 @@
             android:text="BLEPhoneDemo"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="0dp" />
+
         <Button
             android:id="@+id/btn_kotlindemo"
             android:layout_width="368dp"
             android:layout_height="wrap_content"
             android:text="kotlinDemo"
-            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteX="100dp"
             tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/btn_annimationdemo"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:text="animation" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
