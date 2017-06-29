@@ -3,7 +3,6 @@ package lee.leedemo
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main_kotlin.*
-import java.security.cert.CertPathValidatorException
 
 class MainKotlinActivity : AppCompatActivity() {
 
@@ -17,12 +16,12 @@ class MainKotlinActivity : AppCompatActivity() {
         a = 2;
         val b = 2;
         //b = 4;val定义不可变变量
+    }
+
+    fun Address.swap() {
 
     }
 
-    fun Address.swap(){
-        
-    }
     class Address {
         var name: String
             set(value) {}

@@ -3,9 +3,21 @@ package lee.leedemo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.*
+import android.view.animation.Animation.AnimationListener
 import kotlinx.android.synthetic.main.activity_animation.*
 
-class AnimationActivity : AppCompatActivity() {
+class AnimationActivity : AppCompatActivity() ,AnimationListener{
+    override fun onAnimationStart(animation: Animation?) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onAnimationEnd(animation: Animation?) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onAnimationRepeat(animation: Animation?) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +46,15 @@ class AnimationActivity : AppCompatActivity() {
         anim.fillAfter = false
         anim.addAnimation(annimationX)
         anim.addAnimation(annimationY)
+        anim.setAnimationListener(this)
+
         anim.duration = 8000
         anim.startOffset = 4000
         tv.startAnimation(anim)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        tv.clearAnimation()
     }
 }
