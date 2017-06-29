@@ -1,5 +1,6 @@
 package lee.leedemo;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
+    private Activity mActivity = this;
+
     @OnClick(R.id.btn_bledemo)
     void bledemo() {
         startActivity(new Intent(MainActivity.this, BleDemoActivity.class));
@@ -16,17 +19,22 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_blephonedemo)
     void blephonedemo() {
-        startActivity(new Intent(MainActivity.this, BlePhoneDemoActivity.class));
+        startActivity(new Intent(mActivity, BlePhoneDemoActivity.class));
     }
 
     @OnClick(R.id.btn_kotlindemo)
     void kotlindemo() {
-        startActivity(new Intent(MainActivity.this, MainKotlinActivity.class));
+        startActivity(new Intent(mActivity, MainKotlinActivity.class));
     }
 
     @OnClick(R.id.btn_annimationdemo)
     void btn_annimationdemo() {
-        startActivity(new Intent(MainActivity.this, AnimationActivity.class));
+        startActivity(new Intent(mActivity, AnimationActivity.class));
+    }
+
+    @OnClick(R.id.btn_canvasdemo)
+    void btn_canvasdemo() {
+        startActivity(new Intent(mActivity, CavansAvtivity.class));
     }
 
     @Override
@@ -34,6 +42,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
     }
 }
