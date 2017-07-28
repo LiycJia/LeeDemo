@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Display;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -35,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_canvasdemo)
     void btn_canvasdemo() {
         startActivity(new Intent(mActivity, CavansAvtivity.class));
+    }
+
+    @OnClick(R.id.btn_upvoteview)
+    void btn_upvoteview() {
+        startActivity(new Intent(mActivity, UpvoteActivity.class));
     }
 
     @Override

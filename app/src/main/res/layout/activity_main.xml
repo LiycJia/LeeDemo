@@ -47,5 +47,11 @@
             android:layout_width="368dp"
             android:layout_height="wrap_content"
             android:text="cavans" />
+
+        <Button
+            android:id="@+id/btn_upvoteview"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:text="upvote" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

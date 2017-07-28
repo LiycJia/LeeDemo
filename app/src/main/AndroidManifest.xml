@@ -26,7 +26,8 @@
         <activity android:name=".BlePhoneDemoActivity" />
         <activity android:name=".MainKotlinActivity" />
         <activity android:name=".AnimationActivity" />
-        <activity android:name=".CavansAvtivity"></activity>
+        <activity android:name=".CavansAvtivity" />
+        <activity android:name=".UpvoteActivity"></activity>
     </application>
 
 </manifest>
